@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:uk-gov-hsl-msu:pgsvc-v03" elementFormDefault="qualified" targetNamespace="urn:uk-gov-hsl-msu:pgsvc-v03" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Generate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inputs" nillable="true" type="tns:Inputs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Inputs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeLower" type="xs:double" />
+      <xs:element minOccurs="0" name="AgeUpper" type="xs:double" />
+      <xs:element minOccurs="0" name="BodyMassIndexLower" type="xs:double" />
+      <xs:element minOccurs="0" name="BodyMassIndexUpper" type="xs:double" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="Dataset" type="q1:DatasetName" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="EnzymeRateParameter" type="q2:EnzymeRateParameterType" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="EnzymeRateUnits" type="q3:EnzymeRateUnitType" />
+      <xs:element minOccurs="0" name="EthnicityProbabilityBlack" type="xs:double" />
+      <xs:element minOccurs="0" name="EthnicityProbabilityNonBlackOrWhite" type="xs:double" />
+      <xs:element minOccurs="0" name="EthnicityProbabilityWhite" type="xs:double" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="FlowUnits" type="q4:FlowUnitType" />
+      <xs:element minOccurs="0" name="HeightLower" type="xs:double" />
+      <xs:element minOccurs="0" name="HeightUpper" type="xs:double" />
+      <xs:element minOccurs="0" name="InVitroEnzymeRates" nillable="true" type="tns:ArrayOfInVitroEnzymeRate" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="IsRichlyPerfusedTissueDiscrete" type="q5:RichlyPerfused" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="IsSlowlyPerfusedTissueDiscrete" type="q6:SlowlyPerfused" />
+      <xs:element minOccurs="0" name="MolecularWeight" type="xs:double" />
+      <xs:element minOccurs="0" name="PopGenUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PopulationSize" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="PopulationType" type="q7:PopulationType" />
+      <xs:element minOccurs="0" name="ProbabilityOfMale" type="xs:double" />
+      <xs:element minOccurs="0" name="Seed" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Inputs" nillable="true" type="tns:Inputs" />
+  <xs:complexType name="ArrayOfInVitroEnzymeRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InVitroEnzymeRate" nillable="true" type="tns:InVitroEnzymeRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInVitroEnzymeRate" nillable="true" type="tns:ArrayOfInVitroEnzymeRate" />
+  <xs:complexType name="InVitroEnzymeRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enzyme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InVitroEnzymeRate" nillable="true" type="tns:InVitroEnzymeRate" />
+  <xs:element name="GenerateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GenerateResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cancel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCompleted">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCompletedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsCompletedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveResults">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveResultsResult" nillable="true" type="tns:PopGenRes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PopGenRes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Individuals" nillable="true" type="tns:ArrayOfIndividual" />
+      <xs:element minOccurs="0" name="Parameters" nillable="true" type="tns:Parameters" />
+      <xs:element minOccurs="0" name="Summary" nillable="true" type="tns:Summary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PopGenRes" nillable="true" type="tns:PopGenRes" />
+  <xs:complexType name="ArrayOfIndividual">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Individual" nillable="true" type="tns:Individual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndividual" nillable="true" type="tns:ArrayOfIndividual" />
+  <xs:complexType name="Individual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:double" />
+      <xs:element minOccurs="0" name="BodyMass" type="xs:double" />
+      <xs:element minOccurs="0" name="CardiacOutput" type="xs:double" />
+      <xs:element minOccurs="0" name="Enzymes" nillable="true" type="tns:Enzymes" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="Ethnicity" type="q9:Ethnicity" />
+      <xs:element minOccurs="0" name="Height" type="xs:double" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" minOccurs="0" name="Sex" type="q10:Sex" />
+      <xs:element minOccurs="0" name="Tissues" nillable="true" type="tns:ArrayOfTissue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Individual" nillable="true" type="tns:Individual" />
+  <xs:complexType name="Enzymes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enzyme" nillable="true" type="tns:ArrayOfEnzyme" />
+      <xs:element minOccurs="0" name="Mppgl" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Enzymes" nillable="true" type="tns:Enzymes" />
+  <xs:complexType name="ArrayOfEnzyme">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enzyme" nillable="true" type="tns:Enzyme" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnzyme" nillable="true" type="tns:ArrayOfEnzyme" />
+  <xs:complexType name="Enzyme">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InVivoEnzymeRate" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Enzyme" nillable="true" type="tns:Enzyme" />
+  <xs:complexType name="ArrayOfTissue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tissue" nillable="true" type="tns:Tissue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTissue" nillable="true" type="tns:ArrayOfTissue" />
+  <xs:complexType name="Tissue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Flow" type="xs:double" />
+      <xs:element minOccurs="0" name="Mass" type="xs:double" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tissue" nillable="true" type="tns:Tissue" />
+  <xs:complexType name="Parameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="tns:Filter" />
+      <xs:element minOccurs="0" name="Population" nillable="true" type="tns:Population" />
+      <xs:element minOccurs="0" name="Probability" nillable="true" type="tns:Probability" />
+      <xs:element minOccurs="0" name="Units" nillable="true" type="tns:Units" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parameters" nillable="true" type="tns:Parameters" />
+  <xs:complexType name="Filter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeLowerLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="AgeUpperLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="BmiLowerLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="BmiUpperLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="HeightLowerLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="HeightUpperLimit" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Filter" nillable="true" type="tns:Filter" />
+  <xs:complexType name="Population">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dataset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seed" type="xs:double" />
+      <xs:element minOccurs="0" name="Size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Population" nillable="true" type="tns:Population" />
+  <xs:complexType name="Probability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EthnicityBlack" type="xs:double" />
+      <xs:element minOccurs="0" name="EthnicityNonBlackOrWhite" type="xs:double" />
+      <xs:element minOccurs="0" name="EthnicityWhite" type="xs:double" />
+      <xs:element minOccurs="0" name="Male" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Probability" nillable="true" type="tns:Probability" />
+  <xs:complexType name="Units">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnzymeRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flow" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Units" nillable="true" type="tns:Units" />
+  <xs:complexType name="Summary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Female" nillable="true" type="tns:SummaryStats" />
+      <xs:element minOccurs="0" name="Male" nillable="true" type="tns:SummaryStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Summary" nillable="true" type="tns:Summary" />
+  <xs:complexType name="SummaryStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Flow" nillable="true" type="tns:ArrayOfStats" />
+      <xs:element minOccurs="0" name="InVivoEnzymeRate" nillable="true" type="tns:ArrayOfStats" />
+      <xs:element minOccurs="0" name="Mass" nillable="true" type="tns:ArrayOfStats" />
+      <xs:element minOccurs="0" name="Mppgl" nillable="true" type="tns:ArrayOfStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SummaryStats" nillable="true" type="tns:SummaryStats" />
+  <xs:complexType name="ArrayOfStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Stats" nillable="true" type="tns:Stats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStats" nillable="true" type="tns:ArrayOfStats" />
+  <xs:complexType name="Stats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GeoMean" type="xs:double" />
+      <xs:element minOccurs="0" name="GeoStdDev" type="xs:double" />
+      <xs:element minOccurs="0" name="Mean" type="xs:double" />
+      <xs:element minOccurs="0" name="Median" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P2pt5" type="xs:double" />
+      <xs:element minOccurs="0" name="P5" type="xs:double" />
+      <xs:element minOccurs="0" name="P95" type="xs:double" />
+      <xs:element minOccurs="0" name="P97pt5" type="xs:double" />
+      <xs:element minOccurs="0" name="StdDev" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Stats" nillable="true" type="tns:Stats" />
+  <xs:element name="CleanUp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CleanUpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CleanUpResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

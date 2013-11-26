@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UK.Gov.Hsl.Msu.PGType" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="DatasetName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="P3M" />
+      <xs:enumeration value="ICRP" />
+      <xs:enumeration value="HSE" />
+      <xs:enumeration value="NDNS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DatasetName" nillable="true" type="tns:DatasetName" />
+  <xs:simpleType name="EnzymeRateParameterType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="Vmax" />
+      <xs:enumeration value="CLint" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnzymeRateParameterType" nillable="true" type="tns:EnzymeRateParameterType" />
+  <xs:simpleType name="EnzymeRateUnitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="PicoMolsPerMinute" />
+      <xs:enumeration value="MicroMolsPerHour" />
+      <xs:enumeration value="MilliMolsPerHour" />
+      <xs:enumeration value="PicoGramsPerMinute" />
+      <xs:enumeration value="MicroGramsPerHour" />
+      <xs:enumeration value="MilliGramsPerHour" />
+      <xs:enumeration value="MicroLitresPerMinute" />
+      <xs:enumeration value="MilliLitresPerHour" />
+      <xs:enumeration value="LitresPerHour" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnzymeRateUnitType" nillable="true" type="tns:EnzymeRateUnitType" />
+  <xs:simpleType name="FlowUnitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="MilliLitresPerMinute" />
+      <xs:enumeration value="LitresPerHour" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FlowUnitType" nillable="true" type="tns:FlowUnitType" />
+  <xs:simpleType name="RichlyPerfused">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Brain" />
+          <xs:enumeration value="Gonads" />
+          <xs:enumeration value="Heart" />
+          <xs:enumeration value="Kidney" />
+          <xs:enumeration value="LargeIntestine" />
+          <xs:enumeration value="Liver" />
+          <xs:enumeration value="Pancreas" />
+          <xs:enumeration value="SmallIntestine" />
+          <xs:enumeration value="Spleen" />
+          <xs:enumeration value="Stomach" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="RichlyPerfused" nillable="true" type="tns:RichlyPerfused" />
+  <xs:simpleType name="SlowlyPerfused">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Adipose" />
+          <xs:enumeration value="Bone" />
+          <xs:enumeration value="Muscle" />
+          <xs:enumeration value="Skin" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="SlowlyPerfused" nillable="true" type="tns:SlowlyPerfused" />
+  <xs:simpleType name="PopulationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="Realistic" />
+      <xs:enumeration value="HighVariation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PopulationType" nillable="true" type="tns:PopulationType" />
+  <xs:simpleType name="Ethnicity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="White" />
+      <xs:enumeration value="Black" />
+      <xs:enumeration value="NonBlackOrWhite" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Ethnicity" nillable="true" type="tns:Ethnicity" />
+  <xs:simpleType name="Sex">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="__None" />
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Sex" nillable="true" type="tns:Sex" />
+</xs:schema>

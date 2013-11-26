@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2d39411-0cb6-486a-b232-004adc26ccf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1109/svc/pgsvc.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="pgsvc-v03.wsdl" MetadataType="Wsdl" ID="afc21487-3111-4216-b356-ec50024ed1ca" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="pgsvc-v03.xsd" MetadataType="Schema" ID="10e06552-72d1-4f4c-8d01-79212578a5cd" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b8ee6a9d-8b5c-4a35-9cbd-d40e509d47d7" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGType.xsd" MetadataType="Schema" ID="c955799c-d867-4ce3-ba73-b0e8e3eeaf7b" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="8edd7c8c-93b9-4372-a3fb-9cfe97acc581" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGSvc.xsd" MetadataType="Schema" ID="af14d9eb-bad1-4839-9af9-be2c24c19c76" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
