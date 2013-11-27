@@ -12,13 +12,17 @@ namespace PGSvcClient
 {
   class Program
   {
-    static void Main(string[] args)
+    static void Main(string[] args) // -o will open the CSV in Excel or default program
     {
+      // expects input parameters to be in current directory
       if (!File.Exists("inputs.xml"))
       {
         MakeInputs();
         Environment.Exit(0);
       }
+
+      // NB: recommended pattern in .NET client code does not use a using statement
+      // see http://msdn.microsoft.com/en-us/library/aa355056.aspx
 
       var client = new PopGenSvcClient();
       try
@@ -29,23 +33,30 @@ namespace PGSvcClient
           inputs = (new DataContractSerializer(typeof(Inputs))).ReadObject(reader) as Inputs;
         }
 
+        // step 1. initiate task
         var errors = client.Generate(inputs);
 
         if (errors == null)
         {
           while (true)
           {
+            // at the time of writing, the service receive timeout is set to 30s
+            // and the session inactivity timeout is set to 10s
             System.Threading.Thread.Sleep(3000);
+
+            // step 2. poll for results ready
             if (client.IsCompleted())
             {
               break;
             }
           }
 
+          // step 3. download results (possibly several megabytes' worth)
           var popGenRes = client.RetrieveResults();
           Write(popGenRes, args.Any(a => a.Equals("-o", StringComparison.InvariantCultureIgnoreCase)));
           Console.WriteLine(popGenRes.Individuals.Length.ToString() + " individual(s) generated");
 
+          // step 4. tell the server we've finished (wait time can be up to 30s)
           var secsToWait = client.CleanUp();
           Console.WriteLine(secsToWait.ToString() + " second(s) to wait");
         }
