@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2d39411-0cb6-486a-b232-004adc26ccf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5820d0cc-53f2-4fae-90cc-32b66fd94a72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,15 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1109/svc/pgsvc.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="pgsvc-v03.wsdl" MetadataType="Wsdl" ID="afc21487-3111-4216-b356-ec50024ed1ca" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
-    <MetadataFile FileName="pgsvc-v03.xsd" MetadataType="Schema" ID="10e06552-72d1-4f4c-8d01-79212578a5cd" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b8ee6a9d-8b5c-4a35-9cbd-d40e509d47d7" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
-    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGType.xsd" MetadataType="Schema" ID="c955799c-d867-4ce3-ba73-b0e8e3eeaf7b" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="8edd7c8c-93b9-4372-a3fb-9cfe97acc581" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
-    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGSvc.xsd" MetadataType="Schema" ID="af14d9eb-bad1-4839-9af9-be2c24c19c76" SourceId="1" SourceUrl="http://localhost:1109/svc/pgsvc.svc/mex" />
+    <MetadataFile FileName="pgsvc-v03.wsdl" MetadataType="Wsdl" ID="b18d5668-ded0-4c7f-92bc-c5a7cddbd971" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
+    <MetadataFile FileName="pgsvc-v03.xsd" MetadataType="Schema" ID="c979ad14-7975-4c83-96a4-89f304259b64" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="662f1d18-5e76-40ae-8cad-0d96b3e7e637" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
+    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGType.xsd" MetadataType="Schema" ID="8ff8adb1-3c09-4f1d-b87c-90589168a0b7" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="af897c80-565b-4c12-90dc-79d70446578d" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
+    <MetadataFile FileName="UK.Gov.Hsl.Msu.PGSvc.xsd" MetadataType="Schema" ID="82d6cd87-5609-4417-8d53-46dfb2f29e06" SourceId="1" SourceUrl="http://xnet.hsl.gov.uk/popgen/svc/pg.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

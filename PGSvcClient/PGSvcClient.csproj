@@ -54,6 +54,20 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pgr2csv.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\PGSvc\PGSvcClient.PGSvc.PopGenRes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PGSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PGSvc\configuration.svcinfo" />
+    <None Include="Service References\PGSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\PGSvc\Arrays.xsd">
       <SubType>Designer</SubType>
@@ -61,9 +75,6 @@
     <None Include="Service References\PGSvc\pgsvc-v03.wsdl" />
     <None Include="Service References\PGSvc\pgsvc-v03.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PGSvc\PGSvcClient.PGSvc.PopGenRes.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\PGSvc\service.xsd">
       <SubType>Designer</SubType>
@@ -77,23 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\PGSvc\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PGSvc\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PGSvc\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PGSvc\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="pgr2csv.xsl">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

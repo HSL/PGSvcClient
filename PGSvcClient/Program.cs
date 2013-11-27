@@ -150,7 +150,7 @@ namespace PGSvcClient
     {
       var inputs = new Inputs();
 
-      inputs.PopGenUserName = "<approved PopGen user>";
+      inputs.PopGenUserName = "(approved PopGen user)";
       inputs.PopulationSize = 10;
       inputs.PopulationType = PopulationType.Realistic;
       inputs.Dataset = DatasetName.P3M;
